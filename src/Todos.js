@@ -44,11 +44,7 @@ class Todos extends Component{
                 <ul>
                 {
                     this.state.todos.map((todo,index)=>{
-                        return <li key={index}>{todo} <button onClick={
-                            ()=>{
-                                this.removeTodo(todo);
-                            }
-                        }>Delete</button></li>
+                        return <li key={index}>{todo} <button onClick={()=>this.removeTodo(todo)}>Delete</button></li>
                     })
                 }
                 </ul>
