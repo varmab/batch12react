@@ -15,6 +15,12 @@ class BookList extends React.Component{
         this.props.addToWishlist(book);
     }
 
+    componentWillReceiveProps(newProps){
+        this.setState({
+            books:newProps.books
+        })
+    }
+
     shouldComponentUpdate(newProps,newState){
         if(newState.books.length!=this.state.books.length){
             return true;

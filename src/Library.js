@@ -6,25 +6,23 @@ class Library extends React.Component{
     constructor(){
         super();
 
-        var myBooks=[
-            {
-                id:1,
-                title:"HTML/CSS Fundamentals"
-            },
-            {
-                id:2,
-                title:"JavaScript Pro"
-            },
-            {
-                id:3,
-                title:"React Fundamentals"
-            }
-        ]
-
         this.state={
-            books:myBooks,
+            books:[],
             wishlist:[]
         }
+    }
+
+    componentDidMount(){
+        var url='https://gist.githubusercontent.com/Bachmann1234/a2b4207caa29dbc23e29/raw/37825725807d087455200801ccbb03c16448efc6/gistfile1.txt'
+
+        fetch(url)
+        .then((response)=>response.json())
+        .then((data)=>{
+            console.log(JSON.stringify(data))
+            this.setState({
+                books:data.items
+            })
+        })
     }
 
     addToWishlist=(book)=>{

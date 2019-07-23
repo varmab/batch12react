@@ -19,7 +19,7 @@ class Book extends React.Component{
         console.log('rendering Book')
         return(
             <React.Fragment>
-                <h1>{this.state.book.title}</h1>
+                <h1>{this.state.book.volumeInfo.title}</h1>
                 <button onClick={this.add}>Add to wishlist</button>
             </React.Fragment>
         )
