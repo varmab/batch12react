@@ -1,3 +1,4 @@
+import React from 'react';
 //stateless functional component
 const User=(props)=>{
     return(
