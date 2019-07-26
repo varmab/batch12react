@@ -39,7 +39,7 @@ class Library extends React.Component{
         console.log('rendering Library')
         return(
             <React.Fragment>
-                <h1>Library</h1>
+                {this.props.children}
                 <Wishlist books={this.state.wishlist}/>
                 <BookList books={this.state.books} addToWishlist={this.addToWishlist}/>
             </React.Fragment>

@@ -13,8 +13,6 @@ class Book extends React.Component{
         this.props.addToWishlist(this.state.book);
     }
 
-    
-
     render(){
         console.log('rendering Book')
         return(

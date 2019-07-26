@@ -1,7 +1,7 @@
 import React from 'react'
 import Book from './Book';
 
-class BookList extends React.Component{
+class BookList extends React.PureComponent{
     constructor(props){
         super(props);
 
@@ -21,12 +21,14 @@ class BookList extends React.Component{
         })
     }
 
-    shouldComponentUpdate(newProps,newState){
-        if(newState.books.length!=this.state.books.length){
-            return true;
-        }
-        return false;
-    }
+    //commented to replace with PureComponent
+    
+    // shouldComponentUpdate(newProps,newState){
+    //     if(newState.books.length!=this.state.books.length){
+    //         return true;
+    //     }
+    //     return false;
+    // }
     
     render(){
         console.log('rendering BookList')

@@ -16,7 +16,9 @@ class  App extends React.Component {
           <Welcome name="Varma" year={2020} password="12334324"/>
           <Welcome name="Ram" year={2025} password="3423432"/>
         </header>
-        <Library/>
+        <Library>
+            <Welcome name="Batch 12"/>
+        </Library>
       </div>
     )
   }
